@@ -1,5 +1,6 @@
-const express = require('express');
-const morgan = require('morgan');
+import express from 'express';
+import morgan from 'morgan';
+import __dirname from 'path';
 
 const app = express();
 
@@ -10,4 +11,4 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
-module.exports = app;
+export default app;
