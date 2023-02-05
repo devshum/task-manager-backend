@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Backed for the task manager app",
   "main": "server.js",
-  "engines": { "node": "16.x" },
+  "engines": { "node": "14.x" },
   "scripts": {
     "start:ts": "tsc -w",
     "start:js": "nodemon dist/server.js",
