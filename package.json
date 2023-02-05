@@ -8,7 +8,7 @@
     "start:ts": "tsc -w",
     "start:js": "nodemon dist/server.js",
     "start-dev": "concurrently npm:start:*",
-    "start": "node server.js"
+    "start": "node dist/server.js"
   },
   "author": "Vlad Shum",
   "license": "ISC",
