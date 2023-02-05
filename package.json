@@ -8,8 +8,8 @@
   },
   "scripts": {
     "start:ts": "tsc -w",
-    "start:js": "nodemon dist/server.js",
-    "start": "node dist/server.js",
+    "start:js": "nodemon api/server.js",
+    "start": "node api/server.js",
     "serve": "concurrently npm:start:*"
   },
   "author": "Vlad Shum",
