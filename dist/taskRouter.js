@@ -7,5 +7,5 @@ exports.taskRouter = void 0;
 const express_1 = __importDefault(require("express"));
 const taskController_1 = require("./taskController");
 exports.taskRouter = express_1.default.Router();
-exports.taskRouter.route('/').get(taskController_1.getAllTasks);
+exports.taskRouter.route('/').get(taskController_1.getAllTasks).post(taskController_1.createTask);
 //# sourceMappingURL=taskRouter.js.map

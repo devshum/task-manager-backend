@@ -11,19 +11,25 @@ const taskSchema = new mongoose_1.default.Schema({
     },
     date: {
         type: Date,
-        required: [true, 'A task must have a date!'],
         default: Date.now(),
     },
     status: {
         type: String,
         required: [true, 'A task must have a status!'],
-        enum: ['closed', 'pending', 'in progress']
+        enum: ['closed', 'pending', 'in progress'],
     },
     importance: {
         type: String,
         required: [true, 'A task must have an importance!'],
-        enum: ['minor', 'normal', 'critical']
+        enum: ['minor', 'normal', 'critical'],
     },
+});
+taskSchema.method('toJSON', function toJSON() {
+    const { __v, _id, ...object } = this.toObject();
+    return {
+        id: _id,
+        ...object,
+    };
 });
 exports.default = mongoose_1.default.model('Task', taskSchema);
 //# sourceMappingURL=taskModel.js.map
