@@ -1,3 +1,4 @@
+import functions from 'firebase-functions';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import { app } from './app';
@@ -16,3 +17,6 @@ mongoose.connect(database, () =>
 app.listen(port, () => {
   console.log(`The app is runing on port ${port}...`);
 });
+
+// Export CLOUD FUNCTION
+exports.app = functions.https.onRequest(app);
