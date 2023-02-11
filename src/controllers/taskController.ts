@@ -1,6 +1,6 @@
-import TaskModel from './taskModel';
+import TaskModel from '../models/taskModel';
 import express from 'express';
-import { Task } from './interfaces';
+import { Task } from '../interfaces/interfaces';
 
 export const getAllTasks = async (
   req: express.Request,

@@ -8,7 +8,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const app_1 = require("./app");
 dotenv_1.default.config({ path: './.env' });
 const port = process.env.PORT || 3000;
-const database = process.env.DATABASE;
+const database = process.env.MONGO_URI;
 // DATABASE CONNECTION
 mongoose_1.default.set('strictQuery', false);
 mongoose_1.default.connect(database, () => console.log('The database connection is successful!'));

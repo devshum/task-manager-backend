@@ -1,7 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-import { taskRouter } from './taskRouter';
+import { taskRouter } from './routers/taskRouter';
 
 export const app = express();
 
