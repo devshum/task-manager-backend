@@ -2,14 +2,17 @@
   "name": "task-manager-backend",
   "version": "1.0.0",
   "description": "Backed for the task manager app",
-  "main": "dist/server.js",
+  "main": "src-test/server.js",
   "engines": {
     "node": "16.x"
   },
+  "type": "module",
   "scripts": {
     "start:ts": "tsc -w",
     "start:js": "nodemon api/server.js",
-    "serve": "concurrently npm:start:*"
+    "serve-ts": "concurrently npm:start:*",
+    "serve-js": "nodemon src-test/server.js",
+    "start": "node src-test/server.js"
   },
   "author": "Vlad Shum",
   "license": "ISC",
