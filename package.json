@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Backed for the task manager app",
   "main": "src-test/server.js",
-  "engines": {
-    "node": "16.x"
-  },
   "type": "module",
   "scripts": {
     "start:ts": "tsc -w",
