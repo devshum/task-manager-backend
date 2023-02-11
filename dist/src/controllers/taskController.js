@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createTask = exports.getAllTasks = void 0;
-const taskModel_1 = __importDefault(require("./taskModel"));
+const taskModel_1 = __importDefault(require("../models/taskModel"));
 const getAllTasks = async (req, res) => {
     try {
         const tasks = (await taskModel_1.default.find());

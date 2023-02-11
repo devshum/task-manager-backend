@@ -24,12 +24,5 @@ const taskSchema = new mongoose_1.default.Schema({
         enum: ['minor', 'normal', 'critical'],
     },
 });
-taskSchema.method('toJSON', function toJSON() {
-    const { __v, _id, ...object } = this.toObject();
-    return {
-        id: _id,
-        ...object,
-    };
-});
 exports.default = mongoose_1.default.model('Task', taskSchema);
 //# sourceMappingURL=taskModel.js.map
