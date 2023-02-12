@@ -6,8 +6,7 @@
   "scripts": {
     "start:ts": "tsc -w",
     "start:js": "nodemon api/server.js",
-    "serve-ts": "concurrently npm:start:*",
-    "serve-js": "nodemon src-test/server.js",
+    "serve": "concurrently npm:start:*",
     "start": "node dist/server.js"
   },
   "author": "Vlad Shum",
