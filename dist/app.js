@@ -7,7 +7,9 @@ exports.app = void 0;
 const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const taskRouter_1 = require("./routers/taskRouter");
+const cors_1 = __importDefault(require("cors"));
 exports.app = (0, express_1.default)();
+exports.app.use((0, cors_1.default)());
 exports.app.use(express_1.default.json());
 exports.app.use('/api/v1/tasks', taskRouter_1.taskRouter);
 if (process.env.NODE_ENV === 'development') {
